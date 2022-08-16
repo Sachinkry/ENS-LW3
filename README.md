@@ -1,1 +1,1 @@
-ENS demo
+Integrating ENS name to our Dapp! 
