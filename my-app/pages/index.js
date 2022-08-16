@@ -44,16 +44,6 @@ export default function Home() {
     }
   }
 
-  useEffect(() => {
-    if (!walletConnected) {
-      web3ModalRef.current = new Web3Modal({
-        network: "rinkeby",
-        providerOptions: {},
-        disableInjectedProvider: false
-      });
-      connectWallet();
-    }
-  }, [walletConnected]);
 
   const connectWallet = async () => {
     try {
@@ -76,6 +66,20 @@ export default function Home() {
       );
     }
   }
+
+
+  useEffect(() => {
+    if (!walletConnected) {
+      web3ModalRef.current = new Web3Modal({
+        network: "rinkeby",
+        providerOptions: {},
+        disableInjectedProvider: false
+      });
+      connectWallet();
+    }
+  }, [walletConnected]);
+
+
   return (
     <div>
       <Head>
