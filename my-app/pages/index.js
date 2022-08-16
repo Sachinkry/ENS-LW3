@@ -77,7 +77,7 @@ export default function Home() {
       });
       connectWallet();
     }
-  }, [walletConnected]);
+  }, []);
 
 
   return (
@@ -93,7 +93,7 @@ export default function Home() {
             Welcome to LearnWeb3 Punks, {ens ? ens : address}!
           </h1>
           <div className={styles.description}>
-            It's an NFT collection for LearnWeb3 Punks.
+            It is an NFT collection for LearnWeb3 Punks.
           </div>
           {renderButton()}
         </div>
